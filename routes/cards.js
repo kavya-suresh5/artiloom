@@ -179,7 +179,14 @@ route.post('/new',isloggedin,upload.array('image'),cardvalidator,ispro,isCardCre
     
 })
 
+route.get('/store', async (req, res, next) => {
+    
 
+res.render('store')
+
+
+
+})
 
 route.get('/:id', async (req,res,next) => {
     try {
