@@ -29,7 +29,7 @@ const app = express();
 app.use(methodOverride('_method'))
 
 // connection to mongoose
-mongoose.connect('mongodb://localhost:27017/handloom').then(() => {
+mongoose.connect(process.env.MONGO).then(() => {
     console.log('connected to the mongodb')
 }).catch(() => {
     console.log('cannot open the connection to mongoose for some reason')
